@@ -44,7 +44,9 @@ cat log.py  >> new_log.py
 
 The python executable that is envoked then needs to be added as an exception for Input Monitoring in Privacy & Security
 
-An example of my distribution after a few days of working
+An example of my distribution after a few days of work
+
+![keystats top frequency](https://github.com/JonasDe/images/blob/master/keystats/keystats.png?raw=true)
 
 
 
