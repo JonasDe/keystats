@@ -1,5 +1,5 @@
 # keystats
-Small script to log keystrokes for statistical reasons. Uses a redis to store pressed key frequency. No character sequences are stored, just the count of keypresses for various keys.
+Small script to log keystrokes for statistical reasons. Uses a redis to store pressed key frequency. No character sequences are stored by default but there is support for it (see source code comments). 
 
 ## Dependencies
 
