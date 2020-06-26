@@ -42,4 +42,9 @@ echo "#\!$(which python)"  >> new_log.py
 cat log.py  >> new_log.py
 ```
 
-The python executable that is envoked then needs to be added as an exception for Input Monitoring in Privacy & Security 
+The python executable that is envoked then needs to be added as an exception for Input Monitoring in Privacy & Security
+
+An example of my distribution after a few days of working
+
+
+
