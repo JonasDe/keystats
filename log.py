@@ -1,17 +1,13 @@
+#!/usr/bin/env python
 from pynput import keyboard
-import os
-import time
 from redis import Redis
-import pdb
-from collections import defaultdict
 
-red = Redis(host='0.0.0.0', port=6379, db=0, ssl_cert_reqs=None)
-
+r = Redis(host='0.0.0.0', port=6379, db=0, ssl_cert_reqs=None)
 previous = None
+
 # Make sure to add them with a '-'
 sequences = {
-    "a-b",
-    "c-d"
+    #"a-b" will register sequential presses a-b 
 }
 
 def on_press(key):
@@ -20,12 +16,10 @@ def on_press(key):
         key = key.char
     else:
         key = key.name
-
     if f"{previous}-{key}" in sequences:
-        red.incr(f"{previous} {key}")
-    red.incr(key)
+        r.incr(f"{previous} {key}")
+    r.incr(key)
     previous = key
-
 
 with keyboard.Listener(on_press=on_press) as listener:
         listener.join()
